@@ -5,4 +5,4 @@ thunderbird
 DOW=$(date +%u)
 HOUR=$(date +"%H")
 
-[[ $HOUR < 19 ]] && (( $DOW < 6 )) && (teams & slack & zoom-client & riot-desktop)
+[[ $HOUR < 19 ]] && (( $DOW < 6 )) && (teams & slack & riot-desktop)
