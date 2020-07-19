@@ -1,0 +1,5 @@
+#!/bin/bash
+
+targetdir="${1%%.*}"
+mkdir "$targetdir"
+unzip $1 -d $targetdir 
