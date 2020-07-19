@@ -1,5 +1,9 @@
 #!/bin/bash
 
 targetdir="${1%%.*}"
+extension="${1##*.}"
 mkdir "$targetdir"
-unzip $1 -d $targetdir 
+
+[ "$extension" = "zip" ] && (unzip $1 -d $targetdir)
+[ "$extension" = "7z" ] && (7z x -o$targetdir $1)
+
