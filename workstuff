@@ -5,4 +5,4 @@ bluemail
 DOW=$(date +%u)
 HOUR=$(date +"%H")
 
-[[ $HOUR < 19 ]] && (( $DOW < 6 )) && ($USER == "work") &&(teams & slack & riot-desktop)
+[[ $HOUR < 19 ]] && (( $DOW < 6 )) && ($USER == "work") && (teams & slack & riot-desktop)
