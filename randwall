@@ -1,4 +1,4 @@
 #!/bin/bash
 
 wall=$(find /home/dolica/.wallpapers -type f | shuf -n 1)
-feh-swallow --bg-center $wall $wall
+feh --bg-center $wall $wall
