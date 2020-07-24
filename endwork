@@ -4,3 +4,6 @@ pkill -f slack
 pkill --oldest teams
 pkill --oldest riot-desktop 
 pkill -f zoom-client
+pkill -f webmail
+pkill -f brainfm
+
