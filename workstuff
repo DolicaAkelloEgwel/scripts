@@ -3,5 +3,5 @@
 DOW=$(date +%u)
 HOUR=$(date +"%H")
 
-[[ $HOUR < 19 ]] && (( $DOW < 6 )) && [ "$USER" = "work" ] && (teams & slack & riot-desktop & brainfm & webmail)
+[[ $HOUR < 19 ]] && (( $DOW < 6 )) && [ "$USER" = "work" ] && (teams & slack & riot-desktop & brainfm & webmail & code)
 [ "$USER" == "dolica" ] && quiterss

@@ -6,4 +6,5 @@ pkill --oldest riot-desktop
 pkill -f zoom-client
 pkill -f webmail
 pkill -f brainfm
+pkill --oldest code
 
