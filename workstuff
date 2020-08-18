@@ -2,10 +2,10 @@
 
 DOW=$(date +%u)
 HOUR=$(date +"%H")
-WORKTIME=$([[ $HOUR < 19 ]] && (( $DOW < 6 )) && [ "$USER" == "work" ])
+[[ $HOUR < 19 ]] && (( $DOW < 6 )) && [ "$USER" == "work" ] && WORKTIME=1
 
 [ "$USER" == "dolica" ] && (quiterss & bluemail & exit)
 
-[ WORKTIME ] && i3-msg 'workspace 3; append_layout ~/.config/i3/syringe-terminal.json'
-[ WORKTIME ] && i3-msg 'workspace music; append_layout ~/.config/i3/music.json'
-[ WORKTIME ] && (vpnstuff & teams & slack & riot-web & brainfm & webmail)
+((WORKTIME)) && i3-msg 'workspace 3; append_layout ~/.config/i3/syringe-terminal.json'
+((WORKTIME)) && i3-msg 'workspace music; append_layout ~/.config/i3/music.json'
+((WORKTIME)) && (vpnstuff & teams & slack & riot-web & brainfm & webmail)
