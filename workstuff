@@ -4,8 +4,15 @@ DOW=$(date +%u)
 HOUR=$(date +"%H")
 WORKTIME=$([[ $HOUR < 19 ]] && (( $DOW < 6 )) && [ "$USER" = "work" ])
 
-$WORKTIME && (teams & slack & riot-web & brainfm & webmail & code & syringevideo)
+$WORKTIME && (teams & slack & riot-web & brainfm & webmail)
 $WORKTIME && i3-msg 'workspace 3; append_layout ~/.config/i3/syringe-terminal.json'
 $WORKTIME && i3-msg 'workspace music; append_layout ~/.config/i3/music.json'
 
-[ "$USER" == "dolica" ] && quiterss
+[ "$USER" == "dolica" ] && quiterss && exit
+
+while [ -z "$(ip link show | grep ppp0)" ]
+do
+    sleep 5s
+done
+
+$WORKTIME && (code & syringevideo)
