@@ -1,0 +1,2 @@
+#!/bin/bash
+alacritty -e ncmpcpp & alacritty -e ncmpcpp -s clock & alacritty -e ncmpcpp -s visualizer 
