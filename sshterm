@@ -1,2 +1,2 @@
 #!/bin/bash
-alacritty -e ssh -J ogf91484@ssh.diamond.ac.uk ogf91484@pc0095
+alacritty -t "diamond-ssh" -e ssh -J ogf91484@ssh.diamond.ac.uk ogf91484@pc0095
