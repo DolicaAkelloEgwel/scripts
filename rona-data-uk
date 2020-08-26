@@ -1,0 +1,6 @@
+#!/bin/bash
+
+curl --no-progress-meter https://corona-stats.online/UK > ~/corona-data-uk
+grep "UK" ~/corona-data-uk |
+    sed "s/\s*//g ; s/║//g ; s/,//g ; s/▲//g ; s/│/;/g" |
+    sed -e "s/\x1b\[.\{1,5\}m//g" 
