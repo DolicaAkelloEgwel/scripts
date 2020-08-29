@@ -1,4 +1,0 @@
-#!/bin/bash
-count_today=$(cut -d";" -f $1 ~/rona-data-today)
-count_yesterday=$(cut -d";" -f $1 ~/rona-data-yesterday)
-echo "$count_today ($((count_today-count_yesterday)))"
