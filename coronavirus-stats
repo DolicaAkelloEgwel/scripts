@@ -35,4 +35,4 @@ def create_stats_string(count_today, count_yesterday):
 
     return f"{count_today} | {sign}{change} | {sign}{percent_increase}%"
 
-print("😷 " + create_stats_string(cases_today, cases_yesterday) + " -- 💀 " + create_stats_string(deaths_today, deaths_yesterday))
+print("😷 " + create_stats_string(cases_today, cases_yesterday) + " || 💀 " + create_stats_string(deaths_today, deaths_yesterday))
