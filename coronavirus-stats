@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-
+from termcolor import colored
 from uk_covid19 import Cov19API
 
 cases_and_deaths = {
@@ -32,7 +32,12 @@ def create_stats_string(count_today, count_yesterday):
     sign = ""
     if change > 0:
         sign = "+"
+        # arrow = colored("🢁","red")
+        arrow = "🢁"
+    if change < 0:
+        # arrow = colored("🢃","green")
+        arrow = "🢃"
 
-    return f"{count_today} | {sign}{change} | {sign}{percent_increase}%"
+    return f"{count_today} | {sign}{change} {arrow} | {sign}{percent_increase}% {arrow}"
 
 print("😷 " + create_stats_string(cases_today, cases_yesterday) + " || 💀 " + create_stats_string(deaths_today, deaths_yesterday))
