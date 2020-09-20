@@ -29,7 +29,7 @@ def create_stats_string(count_today, count_yesterday):
     percent_increase = (change * 1.0 / count_yesterday) * 100
     percent_increase = round(percent_increase, 2) 
 
-    sign = ""
+    sign = arrow = ""
     if change > 0:
         sign = "+"
         # arrow = colored("🢁","red")
