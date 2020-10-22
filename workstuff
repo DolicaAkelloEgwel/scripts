@@ -6,6 +6,5 @@ DOW=$(date +%u)
 HOUR=$(date +"%H")
 [[ $HOUR < 19 ]] && (( $DOW < 6 )) && [ "$USER" == "work" ] && WORKTIME=1
 
-((WORKTIME)) && i3-msg 'workspace syringe; append_layout ~/.config/i3/syringe-terminal.json'
 ((WORKTIME)) && i3-msg 'workspace music; append_layout ~/.config/i3/music.json'
-((WORKTIME)) && (vpnstuff & teams & slack & riot-web & brainfm & webmail)
+((WORKTIME)) && (teams & slack & riot-web & brainfm & webmail)
