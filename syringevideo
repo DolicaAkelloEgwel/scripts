@@ -1,2 +1,0 @@
-#!/bin/bash
-mpv --video-rotate=270 --geometry=20% http://pc0118.cs.diamond.ac.uk:8094/Microlab.mjpg.mjpg
