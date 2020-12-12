@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+import PyDictionary
+import sys
+
+definitions = PyDictionary.PyDictionary().meaning(sys.argv[1])
+
+print(sys.argv[1])
+for value in definitions.values():
+    for defn in value:
+        print(defn)
