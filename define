@@ -2,12 +2,16 @@
 import PyDictionary
 import sys
 import pyperclip
+from termcolor import colored
 
 definitions = PyDictionary.PyDictionary().meaning(sys.argv[1])
 
 clip = [sys.argv[1]]
+print(colored(sys.argv[1], attrs=['bold']))
+
 for value in definitions.values():
     for defn in value:
         clip.append(defn)
+        print(defn)
 
 pyperclip.copy("\n".join(clip))
