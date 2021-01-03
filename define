@@ -6,6 +6,9 @@ import subprocess
 from termcolor import colored
 
 definitions = PyDictionary.PyDictionary().meaning(sys.argv[1])
+if definitions is None:
+    print("Unable to find definition of word {}".format(sys.argv[1]))
+    exit()
 
 clip = [sys.argv[1]]
 print(colored(sys.argv[1], attrs=['bold']))
