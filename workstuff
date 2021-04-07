@@ -1,6 +1,6 @@
 #!/bin/bash
 
-[ "$USER" == "dolica" ] && (quiterss & bluemail & exit)
+[ "$USER" == "dolica" ] && exit
 
 DOW=$(date +%u)
 HOUR=$(date +"%H")
